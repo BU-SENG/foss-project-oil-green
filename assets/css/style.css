@@ -1,0 +1,96 @@
+/* assets/css/style.css - Theme B with Google Inter typography */
+
+/* Load Inter from Google Fonts. If offline, browser will use the fallback stack. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+  --bg: #f7fbff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent1: #0066ff;   /* blue */
+  --accent2: #7b61ff;   /* purple */
+  --accent3: #00c2b8;   /* teal */
+  --glass: rgba(255,255,255,0.7);
+  --glass-2: rgba(255,255,255,0.85);
+}
+
+/* TYPOGRAPHY: Inter + sensible fallbacks */
+:root, body, .stApp {
+  font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 40%);
+}
+
+/* Headings */
+.h1, h1 {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  color: #0b2546;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
+}
+.h2, h2 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #0b2546;
+}
+
+/* Small clean body text */
+p, .stText, .stMarkdown {
+  font-weight: 400;
+  font-size: 15px;
+  color: #10243b;
+}
+
+/* container spacing */
+.main-container {
+  padding: 28px 48px;
+}
+
+/* gentle rounded cards */
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 8px 28px rgba(12,74,166,0.06);
+  border: 1px solid rgba(15,23,42,0.03);
+}
+
+/* form cards */
+.form-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.99));
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(16,24,40,0.04);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: white !important;
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: none !important;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(123,97,255,0.14);
+}
+
+/* Muted link */
+.link-muted { color: var(--muted); text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .main-container { padding: 16px; }
+  .h1 { font-size: 24px; }
+}
+
+/* small utilities */
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
